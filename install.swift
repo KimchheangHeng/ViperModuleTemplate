@@ -8,7 +8,7 @@
 
 import Foundation
 
-let templateName = "Module VIPER.xctemplate"
+let templateName = "VIPER Module.xctemplate"
 let destinationRelativePath = "/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project Templates/iOS/Application"
 
 func printInConsole(_ message:Any){
@@ -52,7 +52,7 @@ func shell(launchPath: String, arguments: [String]) -> String
     
     let data = pipe.fileHandleForReading.readDataToEndOfFile()
     let output = String(data: data, encoding: String.Encoding.utf8)!
-    if output.characters.count > 0 {
+    if output.count > 0 {
         //remove newline character.
         let lastIndex = output.index(before: output.endIndex)
         return String(output[output.startIndex ..< lastIndex])
